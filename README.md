@@ -6,11 +6,11 @@ The project is based on Newton's law of universal gravitation,<img src="/tex/ebe
 
 The project is split in two parts:
 
-1. Star-by-star, a "vanilla" unoptimised version, where the gravitational pull on each planet is computed for each other planet individually, by making use Newton's third law, 
+1. Star-by-star, a "vanilla" unoptimised version, where the gravitational pull on each planet is computed for each other planet individually, by making use of Newton's third law, 
 <p align="center"><img src="/tex/64d10742081cfcb218c9a453eb28695e.svg?invert_in_darkmode&sanitize=true" align=middle width=700.2746553pt height=34.3379058pt/></p>
 we can reduce the number of computations needed per timestep to <img src="/tex/f97c1a43186c0257a4914ddce10d9cda.svg?invert_in_darkmode&sanitize=true" align=middle width=18.061748099999996pt height=33.45973289999998pt/>, where N is the number of starts, but complexity is still <img src="/tex/8e90dbe2d3ca28b3ad0012cb03e7ead6.svg?invert_in_darkmode&sanitize=true" align=middle width=48.70330244999999pt height=26.76175259999998pt/>
  
-2. Barnes-Hut-Pthreads, where  
+2. Barnes-Hut-Pthreads, where the \href{https://en.wikipedia.org/wiki/Barnes%E2%80%93Hut_simulation}{Barnes-Hut Approximation algorithm} is impleme
 
 
 ## Installation
