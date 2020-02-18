@@ -1,3 +1,4 @@
+\usepackage{hyperref}
 # Optimised Galaxy Simulations in C
 
 This project was part of the course High Performance Computing taken at Uppsala University during 2019. Mind that the code was produced at an earlier stage in my education and that everything might not be best practice.
