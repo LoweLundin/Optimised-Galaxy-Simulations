@@ -11,7 +11,7 @@ The project is split in two parts:
 \begin{displayquote}
 When one body exerts a force on a second body, the second body simultaneously exerts a force equal in magnitude and opposite in direction on the first body.
 \end{displayquote}
-we can reduce the number of computations needed per timestep to $\frac{N^2}{2}$, where N is the number of starts, but complexity is still $\mathcal{O}(N^2)$
+we can reduce the number of computations needed per timestep to ,$\frac{N^2}{2}$, , where N is the number of stars, but complexity is still $\mathcal{O}(N^2)$
  
 2. Barnes-Hut-Pthreads, where the [Barnes-Hut Approximation algorithm](https://en.wikipedia.org/wiki/Barnes%E2%80%93Hut_simulation) for 2D problems is implemented, in which multiple planets can be approximated with a single center of mass if the quotient between the width of a cluster of planets and the distance from the body to the center of mass is smaller than a  threshhold value $\theta_{max}$, chosen by the user. 
 
