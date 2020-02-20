@@ -16,7 +16,7 @@ Where the [Barnes-Hut Approximation algorithm](https://en.wikipedia.org/wiki/Bar
 
 ## Installation
 
-'''bash
+```bash
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Clone into the repository git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
@@ -24,11 +24,11 @@ Clone into the repository git clone https://github.com/LoweLundin/Optimised-gala
 Open the download diretory in terminal
 
 Type "make"
-'''
+```
 
 ## Usage
 
-'''bash
+```bash
 If you want graphics, make sure you have an X server running, Xming has been used in development.
 
 step into the directory of whichever version you want to run:
@@ -46,6 +46,4 @@ Note that:
 \item Running with graphics on means longer running times and should not be used when trying to push numbers
 \item The program is runnable for any number of threads except zero, but the program can only be expected to run faster up until the number of threads is twice that of the number of cores. 
 \end{itemize}
-
-
-'''
+```
