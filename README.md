@@ -16,7 +16,7 @@ Where the [Barnes-Hut Approximation algorithm](https://en.wikipedia.org/wiki/Bar
 
 ## Installation
 
-'''
+'''bash
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Clone into the repository git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
@@ -28,7 +28,7 @@ Type "make"
 
 ## Usage
 
-'''
+'''bash
 If you want graphics, make sure you have an X server running, Xming has been used in development.
 
 step into the directory of whichever version you want to run:
