@@ -16,7 +16,7 @@ Where the [Barnes-Hut Approximation algorithm](https://en.wikipedia.org/wiki/Bar
 
 ## Installation
 
-'''bash
+```bash
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Clone into the repository git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
@@ -24,11 +24,11 @@ Clone into the repository git clone https://github.com/LoweLundin/Optimised-gala
 Open the download diretory in terminal
 
 Type "make"
-'''
+```
 
 ## Usage
 
-'''bash
+```bash
 If you want graphics, make sure you have an X server running, Xming has been used in development.
 
 step into the directory of whichever version you want to run:
@@ -40,6 +40,4 @@ For Barnes-Hut-Parallelised, enter ./galsim [number of stars in simulation] [inp
  
 Note that:
 <p align="center"><img src="/tex/e662b240b5ac147e8c83d8aae7902b6c.svg?invert_in_darkmode&sanitize=true" align=middle width=676.89554295pt height=225.0228387pt/></p>
-
-
-'''
+```
