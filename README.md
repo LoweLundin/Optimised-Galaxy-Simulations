@@ -44,7 +44,7 @@ If one stops caring about approximations, the model can be run quite effectively
 try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 1 1 4
 ```
 Note that:
-<p align="center"><img src="/tex/84f2b299e4429f84ce21fde9833f00b6.svg?invert_in_darkmode&sanitize=true" align=middle width=676.8955676999999pt height=257.8995507pt/></p>
+<p align="center"><img src="/tex/9e0ff4cc4213a3cd15e7844defca711a.svg?invert_in_darkmode&sanitize=true" align=middle width=676.8955676999999pt height=257.8995507pt/></p>
 
 ## Correctness of simulations
 
