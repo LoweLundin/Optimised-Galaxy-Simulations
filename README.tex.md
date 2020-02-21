@@ -45,11 +45,11 @@ try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 
 ```
 Note that:
 \begin{itemize}
-\item The "time"-command is used to deduce execution time and can be ommited 
+\item The "time"-command is used to deduce execution time and can be ommited. 
 \item Number of stars must match N given in input file.
-\item delta t is the time elapsed between each computation, smaller delta t means more exact, but slower computation
-\item The program can be run for really large $\theta_{max}$-values, but certain stars might stray "out of bounds", at which time the program is stopped
-\item Running with graphics on means longer running times and should not be used when trying to push numbers
+\item delta t is the time elapsed between each computation, smaller delta t means more exact, but slower computation.
+\item The program can be run for really large $\theta_{max}$-values, but certain stars might stray "out of bounds", at which time the program is stopped.
+\item Running with graphics on means longer running times and should not be used when trying to push numbers.
 \item The program is runnable for any number of threads except zero, but the program can only be expected to run faster up until the number of threads is twice that of the number of cores. 
 \end{itemize}
 
