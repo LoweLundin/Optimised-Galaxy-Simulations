@@ -15,10 +15,9 @@ A "vanilla", unoptimised version, where the gravitational pull on each planet is
 Where the [Barnes-Hut Approximation algorithm](https://en.wikipedia.org/wiki/Barnes%E2%80%93Hut_simulation) for 2D problems is implemented, in which multiple planets can be approximated with a single center of mass if the quotient between the width of a cluster of planets and the distance from the body to the center of mass is smaller than a  threshhold value <img src="/tex/20d4bcfec3faaaae8404a53c8fc76fb2.svg?invert_in_darkmode&sanitize=true" align=middle width=33.96649739999999pt height=22.831056599999986pt/>, chosen by the user. 
 
 ## Installation
-
-```bash
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
+```bash
 Clone into the repository git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
 
 Open the download diretory in terminal
@@ -37,7 +36,8 @@ For Star-by-star, enter ./galsim [number of stars in simulation] [input file to 
 
 
 For Barnes-Hut-Parallelised, enter ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [<img src="/tex/20d4bcfec3faaaae8404a53c8fc76fb2.svg?invert_in_darkmode&sanitize=true" align=middle width=33.96649739999999pt height=22.831056599999986pt/>]  [graphics on/off boolean] [number of threads to run on]
- 
+```
+
+
 Note that:
 <p align="center"><img src="/tex/e662b240b5ac147e8c83d8aae7902b6c.svg?invert_in_darkmode&sanitize=true" align=middle width=676.89554295pt height=225.0228387pt/></p>
-```
