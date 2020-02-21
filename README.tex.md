@@ -19,19 +19,18 @@ The program has also been parallelised using pthreads.
 ## Installation
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
+Download the repository and compile the program
 ```bash
-Clone into the repository git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
-
-Open the download diretory in terminal
-
-Type "make"
+$ cd <WORKING-DIRECTORY>
+$ git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
+$ cd <WORKING-DIRECTORY>/Star-by-star (or /Barnes-Hut-Parallelised)
+$ make
 ```
 
 ## Usage
 
-```bash
 If you want graphics, make sure you have an X server running, Xming has been used in development.
-
+```bash
 step into the directory of whichever version you want to run:
 
 For Star-by-star, enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]"
