@@ -38,7 +38,7 @@ For Star-by-star, enter "time ./galsim [number of stars in simulation] [input fi
 
 example: time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 
-For Barnes-Hut-Parallelised, enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [<img src="/tex/20d4bcfec3faaaae8404a53c8fc76fb2.svg?invert_in_darkmode&sanitize=true" align=middle width=33.96649739999999pt height=22.831056599999986pt/>]  [graphics on/off boolean] [number of threads to run on]"
+For Barnes-Hut-Parallelised, enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]"
 
 example: time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
 
