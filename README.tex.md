@@ -23,26 +23,31 @@ Download the repository and compile the program
 ```bash
 $ cd <WORKING-DIRECTORY>
 $ git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
-$ cd <WORKING-DIRECTORY>/Star-by-star (or /Barnes-Hut-Parallelised)
+$ cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
+$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
 $ make
 ```
 
 ## Usage
 
 If you want graphics, make sure you have an X server running, Xming has been used in development.
+
+For Star-by-star: 
 ```bash
-step into the directory of whichever version you want to run:
+$ cd <WORKING-DIRECTORY>/Star-by-star
 
-For Star-by-star, enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]"
+$enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]"
 
-example: time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
+$example: time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
+```
 
-For Barnes-Hut-Parallelised, enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]"
+For Barnes-Hut-Parallelised:
+```bash
+$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
 
-example: time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
+$ enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]"
 
-If one stops caring about approximations, the model can be run quite effectively with Barnes-Hut, 
-try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 1 1 4
+$ example: time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
 ```
 Note that:
 \begin{itemize}
@@ -52,20 +57,26 @@ Note that:
 \item The program can be run for really large $\theta_{max}$-values, but certain stars might stray "out of bounds", at which time the program is stopped.
 \item Running with graphics on means longer running times and should not be used when trying to push numbers.
 \item The program is runnable for any number of threads except zero, but the program can only be expected to run faster up until the number of threads is twice that of the number of cores. 
+\item If one stops caring about approximations, the model can be run quite effectively with Barnes-Hut, 
+try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 1 1 4
 \end{itemize}
 
 ## Correctness of simulations
 
 To control the "correctness" of the simulations, "compare_gal_files" can be used.
 
+To use, step into the correct directory, then compile and run
 ```bash
-open the compare_gal_files directory
+$ cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
+$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
-compile with: gcc -o compare_gal_files compare_gal_files.c -lm
+$ gcc -o compare_gal_files compare_gal_files.c -lm
 
-use command: ./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
+To run use:
+$./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
 
-example: ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after100steps.gal ../result.gal
+Wxample:
+$ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after100steps.gal ../result.gal
 ```
 
 The ref_output_data-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing result from Star-by-star with equal parameters, one should expect error to be 0.
