@@ -22,41 +22,21 @@ Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 Download the repository and compile the program
 ```bash
 <img src="/tex/53f7f742848b2f3ea9c27c54d4bf1f8d.svg?invert_in_darkmode&sanitize=true" align=middle width=281.90691869999995pt height=22.831056599999986pt/> git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
-<img src="/tex/b2f5d0c17e97ded97dd7ba1899878183.svg?invert_in_darkmode&sanitize=true" align=middle width=667.39792185pt height=24.65753399999998pt/> make
+<img src="/tex/4a9cdd6f97280d0448172d53ff8ca3ec.svg?invert_in_darkmode&sanitize=true" align=middle width=562.61847675pt height=24.65753399999998pt/> cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
+<img src="/tex/d584b1d006afc601216ab77f67f74618.svg?invert_in_darkmode&sanitize=true" align=middle width=700.27449855pt height=164.20092150000002pt/> cd <WORKING-DIRECTORY>/Star-by-star
+
+<img src="/tex/9ccd853c8c0243050c251be44303507e.svg?invert_in_darkmode&sanitize=true" align=middle width=919.3667983499997pt height=24.65753399999998pt/>example: time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 ```
 
-## Usage
-
-If you want graphics, make sure you have an X server running, Xming has been used in development.
+For Barnes-Hut-Parallelised:
 ```bash
-step into the directory of whichever version you want to run:
+<img src="/tex/76c17fd11f5fafce060e1b7363b96159.svg?invert_in_darkmode&sanitize=true" align=middle width=511.3089696pt height=24.65753399999998pt/> enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]"
 
-For Star-by-star, enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]"
+<img src="/tex/009a3ae14dd74ed42149ddc30b0839b1.svg?invert_in_darkmode&sanitize=true" align=middle width=667.3978459499999pt height=282.55708469999996pt/>\theta_{max}<img src="/tex/05434573b97c16d7a40fa98feeb458fb.svg?invert_in_darkmode&sanitize=true" align=middle width=1390.637424pt height=308.85845429999995pt/> cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
+<img src="/tex/b7eba43411ae1e5eab0c71cc36d61164.svg?invert_in_darkmode&sanitize=true" align=middle width=745.06664595pt height=42.19180350000001pt/> gcc -o compare_gal_files compare_gal_files.c -lm
 
-example: time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
-
-For Barnes-Hut-Parallelised, enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]"
-
-example: time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
-
-If one stops caring about approximations, the model can be run quite effectively with Barnes-Hut, 
-try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 1 1 4
-```
-Note that:
-<p align="center"><img src="/tex/9e0ff4cc4213a3cd15e7844defca711a.svg?invert_in_darkmode&sanitize=true" align=middle width=676.8955676999999pt height=257.8995507pt/></p>
-
-## Correctness of simulations
-
-To control the "correctness" of the simulations, "compare_gal_files" can be used.
-
-```bash
-open the compare_gal_files directory
-
-compile with: gcc -o compare_gal_files compare_gal_files.c -lm
-
-use command: ./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
-
-example: ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after100steps.gal ../result.gal
+To run use:
+<img src="/tex/5a36cf5d06b237fe19775b149ccdb495.svg?invert_in_darkmode&sanitize=true" align=middle width=849.8204516999999pt height=45.84475500000001pt/> ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after100steps.gal ../result.gal
 ```
 
 The ref_output_data-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing result from Star-by-star with equal parameters, one should expect error to be 0.
