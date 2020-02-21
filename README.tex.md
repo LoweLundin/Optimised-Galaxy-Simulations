@@ -14,6 +14,8 @@ A "vanilla", unoptimised version, where the gravitational pull on each star is c
 
 Where the [Barnes-Hut Approximation algorithm](https://en.wikipedia.org/wiki/Barnes%E2%80%93Hut_simulation) for 2D problems is implemented, in which multiple stars can be approximated with a single center of mass if the quotient between the width of a cluster of stars and the distance from the body to the center of mass is smaller than a  threshhold value $\theta_{max}$, chosen by the user. 
 
+The program has also been parallelised using pthreads.
+
 ## Installation
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
