@@ -20,7 +20,7 @@ The program has also been parallelised using pthreads.
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Download the repository and compile the program
-```bash
+```
 $ cd <WORKING-DIRECTORY>
 $ git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
 $ cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
@@ -33,7 +33,7 @@ $ make
 If you want graphics, make sure you have an X server running, Xming has been used in development.
 
 For Star-by-star: 
-```bash
+```
 $ cd <WORKING-DIRECTORY>/Star-by-star
 
 $enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]"
@@ -42,7 +42,7 @@ $example: time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 ```
 
 For Barnes-Hut-Parallelised:
-```bash
+```
 $ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
 
 $ enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]"
@@ -66,7 +66,7 @@ try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 
 To control the "correctness" of the simulations, "compare_gal_files" can be used.
 
 To use, step into the correct directory, then compile and run
-```bash
+```
 $ cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
 $ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
