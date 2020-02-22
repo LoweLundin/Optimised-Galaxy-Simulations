@@ -20,19 +20,19 @@ The program has also been parallelised using pthreads.
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Download the repository and compile the program
-```bash
+```
 <img src="/tex/53f7f742848b2f3ea9c27c54d4bf1f8d.svg?invert_in_darkmode&sanitize=true" align=middle width=281.90691869999995pt height=22.831056599999986pt/> git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
 <img src="/tex/4a9cdd6f97280d0448172d53ff8ca3ec.svg?invert_in_darkmode&sanitize=true" align=middle width=562.61847675pt height=24.65753399999998pt/> cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
-<img src="/tex/d584b1d006afc601216ab77f67f74618.svg?invert_in_darkmode&sanitize=true" align=middle width=700.27449855pt height=164.20092150000002pt/> cd <WORKING-DIRECTORY>/Star-by-star
+<img src="/tex/6f798b201b6aa3d585a17a73256a7895.svg?invert_in_darkmode&sanitize=true" align=middle width=700.27449855pt height=164.20092150000002pt/> cd <WORKING-DIRECTORY>/Star-by-star
 
 <img src="/tex/9ccd853c8c0243050c251be44303507e.svg?invert_in_darkmode&sanitize=true" align=middle width=919.3667983499997pt height=24.65753399999998pt/>example: time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 ```
 
 For Barnes-Hut-Parallelised:
-```bash
+```
 <img src="/tex/76c17fd11f5fafce060e1b7363b96159.svg?invert_in_darkmode&sanitize=true" align=middle width=511.3089696pt height=24.65753399999998pt/> enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]"
 
-<img src="/tex/009a3ae14dd74ed42149ddc30b0839b1.svg?invert_in_darkmode&sanitize=true" align=middle width=667.3978459499999pt height=282.55708469999996pt/>\theta_{max}<img src="/tex/05434573b97c16d7a40fa98feeb458fb.svg?invert_in_darkmode&sanitize=true" align=middle width=1390.637424pt height=308.85845429999995pt/> cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
+<img src="/tex/009a3ae14dd74ed42149ddc30b0839b1.svg?invert_in_darkmode&sanitize=true" align=middle width=667.3978459499999pt height=282.55708469999996pt/>\theta_{max}<img src="/tex/67a31b1569ca4b3f3f8a7cce6f63727c.svg?invert_in_darkmode&sanitize=true" align=middle width=1390.637424pt height=308.85845429999995pt/> cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
 <img src="/tex/b7eba43411ae1e5eab0c71cc36d61164.svg?invert_in_darkmode&sanitize=true" align=middle width=745.06664595pt height=42.19180350000001pt/> gcc -o compare_gal_files compare_gal_files.c -lm
 
 To run use:
