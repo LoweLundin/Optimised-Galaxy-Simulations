@@ -36,18 +36,22 @@ For Star-by-star:
 ```
 $ cd <WORKING-DIRECTORY>/Star-by-star
 
-$enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]"
+Enter:
+$ time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]
 
-$example: time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
+Example: 
+$ time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 ```
 
 For Barnes-Hut-Parallelised:
 ```
 $ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
 
-$ enter "time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]"
+Enter:
+$ time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]
 
-$ example: time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
+Example:
+$ time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
 ```
 Note that:
 \begin{itemize}
@@ -72,10 +76,10 @@ $ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-
 
 $ gcc -o compare_gal_files compare_gal_files.c -lm
 
-To run use:
+To runl use:
 $./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
 
-Wxample:
+Example:
 $ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after100steps.gal ../result.gal
 ```
 
