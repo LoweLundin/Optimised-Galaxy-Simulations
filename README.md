@@ -19,24 +19,42 @@ Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Download the repository and compile the program
 ```
-<img src="/tex/53f7f742848b2f3ea9c27c54d4bf1f8d.svg?invert_in_darkmode&sanitize=true" align=middle width=281.90691869999995pt height=22.831056599999986pt/> git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
-<img src="/tex/4a9cdd6f97280d0448172d53ff8ca3ec.svg?invert_in_darkmode&sanitize=true" align=middle width=562.61847675pt height=24.65753399999998pt/> cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
-<img src="/tex/6f798b201b6aa3d585a17a73256a7895.svg?invert_in_darkmode&sanitize=true" align=middle width=700.27449855pt height=164.20092150000002pt/> cd <WORKING-DIRECTORY>/Star-by-star
+cd <WORKING-DIRECTORY>
+git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
+cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
+cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
+make
+```
+
+## Usage
+
+If you want graphics, make sure you have an X server running, Xming has been used in development.
+
+For Star-by-star: 
+```
+<img src="/tex/5d8287a14d66519e40d7ec0d6c1fee88.svg?invert_in_darkmode&sanitize=true" align=middle width=414.30788685pt height=39.45205440000001pt/> time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]
+
+Example: 
+<img src="/tex/be0bfdd4f5904cb3f2296db9e09e17d5.svg?invert_in_darkmode&sanitize=true" align=middle width=426.20635695000004pt height=39.45205440000001pt/> cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
 
 Enter:
-<img src="/tex/1a8600dd66e14c181a3ca8197f4ceaf3.svg?invert_in_darkmode&sanitize=true" align=middle width=863.94417615pt height=45.84475500000001pt/> time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
+<img src="/tex/4c17045ed4ab971ee384a8321dab7050.svg?invert_in_darkmode&sanitize=true" align=middle width=1139.3182646999999pt height=45.84475500000001pt/> time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
 ```
+Note that:
+<p align="center"><img src="/tex/c215b349118716a2a1ff68d7cb0704e3.svg?invert_in_darkmode&sanitize=true" align=middle width=717.99150885pt height=311.41552859999996pt/></p>
 
-For Barnes-Hut-Parallelised:
-```
-<img src="/tex/f05402f70b4a067bda67201c0157add4.svg?invert_in_darkmode&sanitize=true" align=middle width=511.3089696pt height=39.45205440000001pt/> time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]
+## Correctness of simulations
+
+To control the "correctness" of the simulations, "compare_gal_files" can be used.
+
+To use, step into the correct directory, then compile and run
+```bash
+<img src="/tex/05f91982cb652cc73c819bf0a9d306bc.svg?invert_in_darkmode&sanitize=true" align=middle width=667.3979911499999pt height=24.65753399999998pt/> cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
+
+<img src="/tex/96f8f1837059c22219b8f43ddee9e9c6.svg?invert_in_darkmode&sanitize=true" align=middle width=338.18313044999996pt height=39.45205440000001pt/> ./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
 
 Example:
-<img src="/tex/621c5b0c9a5529cdee5bee59ce0b2a32.svg?invert_in_darkmode&sanitize=true" align=middle width=667.3978459499999pt height=282.55708469999996pt/>\theta_{max}<img src="/tex/05434573b97c16d7a40fa98feeb458fb.svg?invert_in_darkmode&sanitize=true" align=middle width=1390.637424pt height=308.85845429999995pt/> cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
-<img src="/tex/b7eba43411ae1e5eab0c71cc36d61164.svg?invert_in_darkmode&sanitize=true" align=middle width=745.06664595pt height=42.19180350000001pt/> gcc -o compare_gal_files compare_gal_files.c -lm
-
-To run:
-<img src="/tex/3c89b02752d22081e210ae2a71364100.svg?invert_in_darkmode&sanitize=true" align=middle width=849.8204516999999pt height=45.84475500000001pt/> ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
+$ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
 ```
 
 The "ref_output_data"-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing result from Star-by-star with equal parameters, one should expect error to be 0.
