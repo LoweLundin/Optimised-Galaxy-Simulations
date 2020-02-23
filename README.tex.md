@@ -66,7 +66,7 @@ time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
 ```
 Note that:
 \begin{itemize}
-\item The "time"-command is used to deduce execution time and can be ommited. 
+\item The "time"-command is used to deduce execution time and can be omitted. 
 \item Number of stars must match N given in input file.
 \item delta t is the time elapsed between each computation, smaller delta t means more exact, but slower computation.
 \item The program can be run for really large $\theta_{max}$-values, but certain stars might stray "out of bounds", at which time the program is stopped.
