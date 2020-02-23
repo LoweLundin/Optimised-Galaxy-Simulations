@@ -72,8 +72,8 @@ Note that:
 \item The program can be run for really large $\theta_{max}$-values, but certain stars might stray "out of bounds", at which time the program is stopped.
 \item Running with graphics on means longer running times and should not be used when trying to push numbers.
 \item The program is runnable for any number of threads except zero, but the program can only be expected to run faster up until the number of threads is twice that of the number of cores. 
-\item If one stops caring about approximations, the model can be run quite effectively with Barnes-Hut, 
-try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 1 1 4
+\item If one does not care about approximations, the model can be run quite effectively with Barnes-Hut, 
+try for example:  time ./galsim 20000 input\_data/ellipse\_N\_20000.gal 1000 0.001 1 1 4
 \end{itemize}
 
 ## Correctness of simulations
