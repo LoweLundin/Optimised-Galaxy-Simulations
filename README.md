@@ -32,7 +32,7 @@ For Barnes-Hut-Parallelised:
 <img src="/tex/f05402f70b4a067bda67201c0157add4.svg?invert_in_darkmode&sanitize=true" align=middle width=511.3089696pt height=39.45205440000001pt/> time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]
 
 Example:
-<img src="/tex/621c5b0c9a5529cdee5bee59ce0b2a32.svg?invert_in_darkmode&sanitize=true" align=middle width=667.3978459499999pt height=282.55708469999996pt/>\theta_{max}<img src="/tex/67a31b1569ca4b3f3f8a7cce6f63727c.svg?invert_in_darkmode&sanitize=true" align=middle width=1390.637424pt height=308.85845429999995pt/> cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
+<img src="/tex/621c5b0c9a5529cdee5bee59ce0b2a32.svg?invert_in_darkmode&sanitize=true" align=middle width=667.3978459499999pt height=282.55708469999996pt/>\theta_{max}<img src="/tex/05434573b97c16d7a40fa98feeb458fb.svg?invert_in_darkmode&sanitize=true" align=middle width=1390.637424pt height=308.85845429999995pt/> cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
 <img src="/tex/b7eba43411ae1e5eab0c71cc36d61164.svg?invert_in_darkmode&sanitize=true" align=middle width=745.06664595pt height=42.19180350000001pt/> gcc -o compare_gal_files compare_gal_files.c -lm
 
 To run:
