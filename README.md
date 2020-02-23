@@ -23,16 +23,43 @@ Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Download the repository and compile the program
 ```
-<img src="/tex/573335fd53c0c98d56bdd0aefccf62f6.svg?invert_in_darkmode&sanitize=true" align=middle width=281.90691869999995pt height=22.831056599999986pt/> git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
+cd <WORKING-DIRECTORY>
 
-<img src="/tex/4a9cdd6f97280d0448172d53ff8ca3ec.svg?invert_in_darkmode&sanitize=true" align=middle width=562.61847675pt height=24.65753399999998pt/> cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
+git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
 
-<img src="/tex/84f466ab274fa967be82f75a9ed7f0b2.svg?invert_in_darkmode&sanitize=true" align=middle width=700.27459095pt height=716.5296864pt/>\theta_{max}$-values, but certain stars might stray "out of bounds", at which time the program is stopped.
-\item Running with graphics on means longer running times and should not be used when trying to push numbers.
-\item The program is runnable for any number of threads except zero, but the program can only be expected to run faster up until the number of threads is twice that of the number of cores. 
-\item If one stops caring about approximations, the model can be run quite effectively with Barnes-Hut, 
-try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 1 1 4
-\end{itemize}
+cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
+cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
+
+make
+```
+
+## Usage
+
+If you want graphics, make sure you have an X server running, Xming has been used in development.
+
+For Star-by-star: 
+```
+cd <WORKING-DIRECTORY>/Star-by-star
+
+Enter:
+time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]
+
+Example: 
+time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
+```
+
+For Barnes-Hut-Parallelised:
+```
+cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
+
+Enter:
+time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]
+
+Example:
+time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
+```
+Note that:
+<p align="center"><img src="/tex/c215b349118716a2a1ff68d7cb0704e3.svg?invert_in_darkmode&sanitize=true" align=middle width=717.99150885pt height=311.41552859999996pt/></p>
 
 ## Correctness of simulations
 
