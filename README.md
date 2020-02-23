@@ -27,14 +27,14 @@ Step into the working directory:
 cd <WORKING-DIRECTORY>
 
 Download the repository:
-git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
+$ git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
 
-Step into the 
-cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
-cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
+Step into the desired directory:
+$ cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
+$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
 
 Compile the program:
-make
+$ make
 ```
 
 ## Usage
