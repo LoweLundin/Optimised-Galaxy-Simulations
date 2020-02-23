@@ -37,8 +37,8 @@ Example:
 <img src="/tex/621c5b0c9a5529cdee5bee59ce0b2a32.svg?invert_in_darkmode&sanitize=true" align=middle width=667.3978459499999pt height=282.55708469999996pt/>\theta_{max}<img src="/tex/67a31b1569ca4b3f3f8a7cce6f63727c.svg?invert_in_darkmode&sanitize=true" align=middle width=1390.637424pt height=308.85845429999995pt/> cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
 <img src="/tex/b7eba43411ae1e5eab0c71cc36d61164.svg?invert_in_darkmode&sanitize=true" align=middle width=745.06664595pt height=42.19180350000001pt/> gcc -o compare_gal_files compare_gal_files.c -lm
 
-To runl use:
-<img src="/tex/d163d11249efba9888e010e084469118.svg?invert_in_darkmode&sanitize=true" align=middle width=849.8204516999999pt height=45.84475500000001pt/> ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after100steps.gal ../result.gal
+To run:
+<img src="/tex/3c89b02752d22081e210ae2a71364100.svg?invert_in_darkmode&sanitize=true" align=middle width=849.8204516999999pt height=45.84475500000001pt/> ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
 ```
 
-The ref_output_data-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing result from Star-by-star with equal parameters, one should expect error to be 0.
+The "ref_output_data"-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing result from Star-by-star with equal parameters, one should expect error to be 0.
