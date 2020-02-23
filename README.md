@@ -66,7 +66,7 @@ Note that:
 To control the "correctness" of the simulations, "compare_gal_files" can be used.
 
 To use, step into the correct directory, then compile and run
-```bash
+```
 cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
 cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
