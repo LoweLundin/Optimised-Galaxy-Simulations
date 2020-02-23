@@ -64,6 +64,8 @@ $ time ./galsim [number of stars in simulation] [input file to read] [number of 
 Example:
 $ time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
 ```
+Try playing around with different parameters.
+
 Note that:
 <p align="center"><img src="/tex/59ddc08a56b7bd9c226ed28bca97979a.svg?invert_in_darkmode&sanitize=true" align=middle width=676.8955676999999pt height=327.03196679999996pt/></p>
 
