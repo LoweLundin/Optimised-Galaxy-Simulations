@@ -32,24 +32,24 @@ If you want graphics, make sure you have an X server running, Xming has been use
 
 For Star-by-star: 
 ```
-$ cd <WORKING-DIRECTORY>/Star-by-star
+cd <WORKING-DIRECTORY>/Star-by-star
 
 Enter:
-$ time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]
+time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]
 
 Example: 
-$ time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
+time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 ```
 
 For Barnes-Hut-Parallelised:
 ```
-$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
+cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
 
 Enter:
-$ time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]
+time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]
 
 Example:
-$ time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
+time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
 ```
 Note that:
 \begin{itemize}
@@ -69,16 +69,16 @@ To control the "correctness" of the simulations, "compare_gal_files" can be used
 
 To use, step into the correct directory, then compile and run
 ```bash
-$ cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
-$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
+cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
+cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
-$ gcc -o compare_gal_files compare_gal_files.c -lm
+gcc -o compare_gal_files compare_gal_files.c -lm
 
 To run:
-$ ./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
+./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
 
 Example:
-$ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
+./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
 ```
 
 The "ref_output_data"-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing result from Star-by-star with equal parameters, one should expect error to be 0.
