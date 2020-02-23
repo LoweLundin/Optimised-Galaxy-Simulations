@@ -4,7 +4,7 @@ This project was part of the course High Performance Computing taken at Uppsala 
 
 The project is based on Newton's law of universal gravitation,$F=G\frac{m_1m_2}{r^2}$, basically "matter attracts gravitationally relative to weight and distance", with every dot on the display representing a star with a unique position, mass and velocity.
 
-The project is split in two parts,
+The project is split in two parts, Star-by-star and Barnes-Hut-Parallelised.
 
 ## Star-by-star
 
@@ -21,15 +21,19 @@ In this version of the program the [Barnes-Hut Approximation algorithm](https://
 ## Installation
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
-Download the repository and compile the program
+To install:
 ```
+Step into the working directory:
 cd <WORKING-DIRECTORY>
 
+Download the repository:
 git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
 
+Step into the 
 cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
 cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
 
+Compile the program:
 make
 ```
 
@@ -39,6 +43,7 @@ If you want graphics, make sure you have an X server running, Xming has been use
 
 For Star-by-star: 
 ```
+Step into the correct directory:
 cd <WORKING-DIRECTORY>/Star-by-star
 
 Enter:
@@ -50,6 +55,7 @@ time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 
 For Barnes-Hut-Parallelised:
 ```
+Step into the current directory:
 cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
 
 Enter:
@@ -74,11 +80,14 @@ try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 
 
 To control the "correctness" of the simulations, "compare_gal_files" can be used.
 
-To use, step into the correct directory, then compile and run
+To use, 
+
 ```
+Step into the correct directory:
 cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
 cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
+Compile:
 gcc -o compare_gal_files compare_gal_files.c -lm
 
 To run:
