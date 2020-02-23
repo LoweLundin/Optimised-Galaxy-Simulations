@@ -29,7 +29,7 @@ $ cd <WORKING-DIRECTORY>
 Download the repository:
 $ git clone https://github.com/LoweLundin/Optimised-Galaxy-Simulations-in-C
 
-Step into the 
+Step into desired directory:
 $ cd Optimised-Galaxy-Simulations-in-C/Star-by-star # For Star-by-star
 $ cd Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
 
@@ -43,7 +43,7 @@ If you want graphics, make sure you have an X server running, Xming has been use
 
 For Star-by-star: 
 ```
-Step into the correct directory:
+Step into directory:
 $ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Star-by-star
 
 Enter:
@@ -55,7 +55,7 @@ $ time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 
 For Barnes-Hut-Parallelised:
 ```
-Step into the current directory:
+Step into the directory:
 $ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised
 
 Enter:
@@ -74,7 +74,7 @@ To control the "correctness" of the simulations, "compare_gal_files" can be used
 To use, 
 
 ```
-Step into the correct directory:
+Step into the directory:
 $ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Star-by-star/compare_gal_files # For Star-by-star
 $ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
