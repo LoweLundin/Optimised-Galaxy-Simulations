@@ -30,8 +30,8 @@ Download the repository:
 $ git clone https://github.com/LoweLundin/Optimised-Galaxy-Simulations-in-C
 
 Step into the 
-$ cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
-$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
+$ cd Optimised-Galaxy-Simulations-in-C/Star-by-star # For Star-by-star
+$ cd Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
 
 Compile the program:
 make
@@ -44,7 +44,7 @@ If you want graphics, make sure you have an X server running, Xming has been use
 For Star-by-star: 
 ```
 Step into the correct directory:
-$ cd <WORKING-DIRECTORY>/Star-by-star
+$ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Star-by-star
 
 Enter:
 $ time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]
@@ -56,7 +56,7 @@ $ time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
 For Barnes-Hut-Parallelised:
 ```
 Step into the current directory:
-$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised
+$ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised
 
 Enter:
 $ time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]
@@ -75,8 +75,8 @@ To use,
 
 ```
 Step into the correct directory:
-$ cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
-$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
+$ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Star-by-star/compare_gal_files # For Star-by-star
+$ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
 Compile:
 $ gcc -o compare_gal_files compare_gal_files.c -lm
