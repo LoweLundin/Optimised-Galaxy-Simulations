@@ -27,7 +27,7 @@ Step into the working directory:
 $ cd <WORKING-DIRECTORY>
 
 Download the repository:
-$ git clone https://github.com/LoweLundin/Optimised-Galaxy-Simulations-in-C
+$ git clone https://github.com/LoweLundin/Optimised-Galaxy-Simulations-in-C/Optimised-Galaxy-Simulations-in-C
 
 Step into the 
 $ cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
