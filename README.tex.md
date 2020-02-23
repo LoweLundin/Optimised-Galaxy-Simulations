@@ -22,7 +22,7 @@ In this version of the program the [Barnes-Hut Approximation algorithm](https://
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Download the repository and compile the program
-```bash
+```
 cd <WORKING-DIRECTORY>
 
 git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
