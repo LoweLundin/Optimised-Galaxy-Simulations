@@ -19,7 +19,7 @@ Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Download the repository and compile the program
 ```
-<img src="/tex/53f7f742848b2f3ea9c27c54d4bf1f8d.svg?invert_in_darkmode&sanitize=true" align=middle width=281.90691869999995pt height=22.831056599999986pt/> git clone https://github.com/LoweLundin/Optimised-galaxy-simulations-in-C
+<img src="/tex/53f7f742848b2f3ea9c27c54d4bf1f8d.svg?invert_in_darkmode&sanitize=true" align=middle width=281.90691869999995pt height=22.831056599999986pt/> git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
 <img src="/tex/4a9cdd6f97280d0448172d53ff8ca3ec.svg?invert_in_darkmode&sanitize=true" align=middle width=562.61847675pt height=24.65753399999998pt/> cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
 <img src="/tex/6f798b201b6aa3d585a17a73256a7895.svg?invert_in_darkmode&sanitize=true" align=middle width=700.27449855pt height=164.20092150000002pt/> cd <WORKING-DIRECTORY>/Star-by-star
 
