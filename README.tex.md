@@ -8,7 +8,7 @@ The project is split in two parts,
 
 ## Star-by-star
 
-A "vanilla", unoptimised version, where the gravitational pull on each star is computed for each other star individually, by making use of Newton's third law, "When one body exerts a force on a second body, the second body simultaneously exerts a force equal in magnitude and opposite in direction on the first body.", we can reduce the number of computations needed per timestep to ,$N^2/2$, , where N is the number of stars, but complexity is still $\mathcal{O}(N^2)$, which means our problem quickly scales in size.
+A "vanilla", unoptimised version, where the gravitational pull on each star is computed for each other star individually, by making use of Newton's third law, "When one body exerts a force on a second body, the second body simultaneously exerts a force equal in magnitude and opposite in direction on the first body.", we can reduce the number of computations needed per timestep to $\frac{N^2}{2}$, where N is the number of stars, but complexity is still $\mathcal{O}(N^2)$, which means our problem quickly scales in size.
 
 ## Barnes-Hut-Parallelised
 
