@@ -12,7 +12,7 @@ typedef struct star{
 
 //Variables for graphics
 const float circleRadius = 0.0015, circleColor = 0;
-const int windowWidth = 600, windowHeight = 600, W = 1, H = 1;
+const int windowWidth = 800, windowHeight = 800, W = 1, H = 1;
 const int wait = 0;
 
 const double epsilon = 0.15; //This can be changed for other values, but needs to be 0.15 for compare-files
