@@ -19,11 +19,11 @@ Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 
 Download the repository and compile the program
 ```
-$ cd <WORKING-DIRECTORY>
-$ git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
-$ cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
-$ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
-$ make
+cd <WORKING-DIRECTORY>
+git clone https://github.com/LoweLundin/Optimised--Simulations-in-C
+cd <WORKING-DIRECTORY>/Star-by-star # For Star-by-star
+cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
+make
 ```
 
 ## Usage
