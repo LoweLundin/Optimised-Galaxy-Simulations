@@ -75,7 +75,7 @@ try for example:  time ./galsim 20000 input_data/ellipse_N_20000.gal 1000 0.001 
 To control the "correctness" of the simulations, "compare_gal_files" can be used.
 
 To use, step into the correct directory, then compile and run
-```bash
+```
 cd <WORKING-DIRECTORY>/Star-by-star/compare_gal_files # For Star-by-star
 cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
