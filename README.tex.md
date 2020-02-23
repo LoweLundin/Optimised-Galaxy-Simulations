@@ -76,11 +76,11 @@ $ cd <WORKING-DIRECTORY>/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-
 
 $ gcc -o compare_gal_files compare_gal_files.c -lm
 
-To runl use:
-$./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
+To run:
+$ ./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
 
 Example:
-$ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after100steps.gal ../result.gal
+$ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
 ```
 
-The ref_output_data-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing result from Star-by-star with equal parameters, one should expect error to be 0.
+The "ref_output_data"-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing result from Star-by-star with equal parameters, one should expect error to be 0.
