@@ -7,7 +7,7 @@ The project is based on Newton's law of universal gravitation,<img src="/tex/ebe
 The project is split in two parts, Star-by-star and Barnes-Hut-Parallelised.
 
 <p align="center">
-  <img width="600" height="600" src=blbal.gif>
+  <img width="600" height="600" src=galsim.gif>
 
 </p>
 <p align="center">Barnes-Hut-Parallelised run with 10000 stars, <img src="/tex/7e9fe18dc67705c858c077c5ee292ab4.svg?invert_in_darkmode&sanitize=true" align=middle width=13.69867124999999pt height=22.465723500000017pt/>t = 0.0001 and <img src="/tex/20d4bcfec3faaaae8404a53c8fc76fb2.svg?invert_in_darkmode&sanitize=true" align=middle width=33.96649739999999pt height=22.831056599999986pt/> = 0.9. <br>
