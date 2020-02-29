@@ -33,7 +33,7 @@ typedef struct threadInformation
     int starStart, intervalLength;
 } tInfo_t;
 
-//global variables 
+//Global variables 
 const float circleRadius = 0.0015, circleColor = 0;
 const int windowWidth = 800, windowHeight = 800, W = 1, H = 1;
 const int wait = 0; //micro seconds
@@ -188,13 +188,13 @@ int main(int argc, char const *argv[])
 
         return -1;
     }
-    const int N = atoi(argv[1]);
-    char *filename = strdup(argv[2]);
-    const int nsteps = atoi(argv[3]);
-    dT = atof(argv[4]);
-    thetaMax = atof(argv[5]);
-    const int graphics = atoi(argv[6]);
-    const int nThreads = atoi(argv[7]); 
+    const int N = atoi(argv[1]); // Number of stars
+    char *filename = strdup(argv[2]); // Name of file, should match with N
+    const int nsteps = atoi(argv[3]); // Number of steps to run for
+    dT = atof(argv[4]); // Time between timesteps
+    thetaMax = atof(argv[5]); // Max value for Barnes-Hut approximation
+    const int graphics = atoi(argv[6]); // Boolean graphics on/off
+    const int nThreads = atoi(argv[7]); // Number of threads to run on
 
     star_t *starArr = (star_t*)malloc(N*sizeof(star_t));
     pthread_t threads[nThreads];
