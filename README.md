@@ -7,7 +7,7 @@ The project is based on Newton's law of universal gravitation,<img src="/tex/ebe
 The project is split in two parts, Star-by-star and Barnes-Hut-Parallelised.
 
 <p align="center">
-  <img width="460" height="460" src=galsim.mp4>
+  <img width="460" height="460" src=galsim.gif>
 
 </p>
 <p align="center">Run on 512 x 512 grid with a square on the boundary as initial condition and 0.05 waitTime. </p>
