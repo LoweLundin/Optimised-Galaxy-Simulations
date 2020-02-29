@@ -45,7 +45,7 @@ $ cd Optimised-Galaxy-Simulations-in-C/Star-by-star # For Star-by-star
 $ cd Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
 
 Compile the program:
-make
+$ make
 ```
 
 ## Usage
