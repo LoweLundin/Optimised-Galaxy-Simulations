@@ -10,7 +10,7 @@ The project is split in two parts, Star-by-star and Barnes-Hut-Parallelised.
   <img width="460" height="460" src=galsim.gif>
 
 </p>
-<p align="center">Barnes-Hut-Parallelised run with 10000 stars, <img src="/tex/38f1e2a089e53d5c990a82f284948953.svg?invert_in_darkmode&sanitize=true" align=middle width=7.928075099999989pt height=22.831056599999986pt/>t = 0.0001 and <img src="/tex/20d4bcfec3faaaae8404a53c8fc76fb2.svg?invert_in_darkmode&sanitize=true" align=middle width=33.96649739999999pt height=22.831056599999986pt/> = 0.9. <br>
+<p align="center">Barnes-Hut-Parallelised run with 10000 stars, <img src="/tex/7e9fe18dc67705c858c077c5ee292ab4.svg?invert_in_darkmode&sanitize=true" align=middle width=13.69867124999999pt height=22.465723500000017pt/>t = 0.0001 and <img src="/tex/20d4bcfec3faaaae8404a53c8fc76fb2.svg?invert_in_darkmode&sanitize=true" align=middle width=33.96649739999999pt height=22.831056599999986pt/> = 0.9. <br>
   Note that "laggy" appearance and low framerate compared to actual run is due to GIF-format limitations.
 </p>
 
