@@ -35,10 +35,14 @@ Note: This has so far only been tried out on Windows with Ubuntu Terminal.
 To install:
 ```
 Step into the working directory:
-<img src="/tex/1bfdc96c95b4e4034f008e2a64b89f07.svg?invert_in_darkmode&sanitize=true" align=middle width=281.90691869999995pt height=45.84475500000001pt/> git clone https://github.com/LoweLundin/Optimised-Galaxy-Simulations-in-C
+$ cd <WORKING-DIRECTORY>
+
+Download the repository:
+$ git clone https://github.com/LoweLundin/Optimised-Galaxy-Simulations-in-C
 
 Step into desired directory:
-<img src="/tex/ea408c454b1cacdd159122ee124cb5cd.svg?invert_in_darkmode&sanitize=true" align=middle width=622.22202075pt height=24.65753399999998pt/> cd Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
+$ cd Optimised-Galaxy-Simulations-in-C/Star-by-star # For Star-by-star
+$ cd Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised # For Barnes-Hut-Parallelised
 
 Compile the program:
 make
@@ -51,13 +55,25 @@ If you want graphics, make sure you have an X server running, Xming has been use
 For Star-by-star: 
 ```
 Step into directory:
-<img src="/tex/5967eaf630e4f128e46e72c1fcaea590.svg?invert_in_darkmode&sanitize=true" align=middle width=700.274553pt height=78.90410880000002pt/> time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]
-
-Example: 
-<img src="/tex/a75567dfbd60ff0899aabafb162a802e.svg?invert_in_darkmode&sanitize=true" align=middle width=426.20635695000004pt height=45.84475500000001pt/> cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised
+$ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Star-by-star
 
 Enter:
-<img src="/tex/4c17045ed4ab971ee384a8321dab7050.svg?invert_in_darkmode&sanitize=true" align=middle width=1139.3182646999999pt height=45.84475500000001pt/> time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
+$ time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [graphics on/off boolean]
+
+Example: 
+$ time ./galsim 2000 input_data/ellipse_N_02000.gal 1000 0.001 1
+```
+
+For Barnes-Hut-Parallelised:
+```
+Step into the directory:
+$ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised
+
+Enter:
+$ time ./galsim [number of stars in simulation] [input file to read] [number of timesteps to run] [delta t] [theta_max]  [graphics on/off boolean] [number of threads to run on]
+
+Example:
+$ time ./galsim 10000 input_data/ellipse_N_10000.gal 1000 0.0001 0.25 1 4
 ```
 Try playing around with different parameters.
 
@@ -72,10 +88,18 @@ To use,
 
 ```
 Step into the directory:
-<img src="/tex/7357eabfe66ee6a87f6c864d1aba3be2.svg?invert_in_darkmode&sanitize=true" align=middle width=700.274553pt height=48.85840080000001pt/> cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
+$ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Star-by-star/compare_gal_files # For Star-by-star
+$ cd <WORKING-DIRECTORY>/Optimised-Galaxy-Simulations-in-C/Barnes-Hut-Parallelised/compare_gal_files # For Barnes-Hut-Parallelised
 
 Compile:
-<img src="/tex/96f8f1837059c22219b8f43ddee9e9c6.svg?invert_in_darkmode&sanitize=true" align=middle width=338.18313044999996pt height=39.45205440000001pt/> ./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
+$ gcc -o compare_gal_files compare_gal_files.c -lm
+
+To run:
+$ ./compare_gal_files [number of stars in files] [reference output data file] [result from last simulation, stored in "result.gal"] 
+
+Example:
+$ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
+```
 
 Example:
 <img src="/tex/06cfbf928c65e0e34460617325676837.svg?invert_in_darkmode&sanitize=true" align=middle width=821.08672965pt height=124.74886710000001pt/>\theta_{max}$ = 0, one should expect error to be 0.
