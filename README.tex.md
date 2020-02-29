@@ -10,7 +10,7 @@ The project is split in two parts, Star-by-star and Barnes-Hut-Parallelised.
   <img width="460" height="460" src=galsim.gif>
 
 </p>
-<p align="center">Barnes-Hut-Parallelised run with 10000 stars, delta t = 0.0001 and $\theta_{max}$ = 0.9. <br>
+<p align="center">Barnes-Hut-Parallelised run with 10000 stars, $\delta$t = 0.0001 and $\theta_{max}$ = 0.9. <br>
   Note that "laggy" appearance and low framerate compared to actual run is due to GIF-format limitations.
 </p>
 
