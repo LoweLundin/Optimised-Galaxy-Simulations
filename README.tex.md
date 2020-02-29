@@ -10,7 +10,7 @@ The project is split in two parts, Star-by-star and Barnes-Hut-Parallelised.
   <img width="460" height="460" src=galsim.gif>
 
 </p>
-<p align="center">Barnes-Hut-Parallelised run with 10000 stars, delta t = 0.0001 and theta_max = 0.9. <br>
+<p align="center">Barnes-Hut-Parallelised run with 10000 stars, delta t = 0.0001 and $\theta_{max}$ = 0.9. <br>
   Note that "laggy" appearance and low framerate compared to actual run is due to GIF-format limitations.
 </p>
 
@@ -25,7 +25,9 @@ we can reduce the number of computations needed per timestep to <img src="/tex/f
 
 ## Barnes-Hut-Parallelised
 
-In this version of the program the [Barnes-Hut approximation algorithm](https://en.wikipedia.org/wiki/Barnes%E2%80%93Hut_simulation) for 2D problems is implemented, in which multiple stars can be approximated with a single center of mass if the quotient between the width of a cluster of stars and the distance from the body to the center of mass is smaller than a  threshhold value <img src="/tex/20d4bcfec3faaaae8404a53c8fc76fb2.svg?invert_in_darkmode&sanitize=true" align=middle width=33.96649739999999pt height=22.831056599999986pt/>, chosen by the user. The program has also been parallelised using pthreads.
+In this version of the program the [Barnes-Hut approximation algorithm](https://en.wikipedia.org/wiki/Barnes%E2%80%93Hut_simulation) for 2D problems is implemented, in which multiple stars can be approximated with a single center of mass if the quotient between the width of a cluster of stars and the distance from the body to the center of mass is smaller than a  threshhold value <img src="/tex/20d4bcfec3faaaae8404a53c8fc76fb2.svg?invert_in_darkmode&sanitize=true" align=middle width=33.96649739999999pt height=22.831056599999986pt/>, chosen by the user. This means the Barnes-Hut implementation can run with complexity $\mathcal{O}(N log N)$.
+
+The program has also been parallelised using pthreads.
 
 ## Installation
 Note: This has so far only been tried out on Windows with Ubuntu Terminal.
@@ -99,4 +101,4 @@ Example:
 $ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
 ```
 
-The "ref_output_data"-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing reference output data files to result from Star-by-star or Barnes-Hut-Parallelised with theta_max = 0, one should expect error to be 0.
+The "ref_output_data"-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing reference output data files to result from Star-by-star or Barnes-Hut-Parallelised with $\theta_{max}$ = 0, one should expect error to be 0.
