@@ -68,13 +68,14 @@ int main(int argc, char const *argv[])
         printf("Wrong number of input arguments");
         return -1;
     }
-    const int N = atoi(argv[1]);
-    char *filename = strdup(argv[2]);
-    const int nsteps = atoi(argv[3]);
-    const double dT = atof(argv[4]);
-    const int graphics = atoi(argv[5]);
-    star_t *starArr = (star_t*)malloc(N*sizeof(star_t));
-
+    const int N = atoi(argv[1]); // Number of stars
+    char *filename = strdup(argv[2]); // Name of file, should match with N
+    const int nsteps = atoi(argv[3]);  // Number of steps to run for
+    const double dT = atof(argv[4]); // Time between timesteps
+    const int graphics = atoi(argv[5]); // Boolean graphics on/off
+    
+    star_t *starArr = (star_t*)malloc(N*sizeof(star_t));    
+  
     const double gravConst = 100/(double)(N);
 
     //Read from file
