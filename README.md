@@ -6,8 +6,6 @@ The project is based on Newton's law of universal gravitation,<img src="/tex/ebe
 
 The project is split in two parts, Star-by-star and Barnes-Hut-Parallelised.
 
-[![Image from Gyazo](https://i.gyazo.com/1bc8802eb2c1b6f3903f94817f7d8c01.gif)](https://gyazo.com/1bc8802eb2c1b6f3903f94817f7d8c01)
-
 <p align="center">
   <img width="460" height="460" src=galsim.mp4>
 
