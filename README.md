@@ -100,4 +100,4 @@ Example:
 $ ./compare_gal_files 3000 ref_output_data/ellipse_N_03000_after200steps.gal ../result.gal
 ```
 
-The "ref_output_data"-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing reference output data files to result from Star-by-star or Barnes-Hut-Parallelised with theta_max = 0, one should expect error to be 0.
+The "ref_output_data"-files have been generated using Star-by-star, with epsilon = 0.15 and dT = 0.0001, number of stars and timesteps given in filename. If comparing reference output data files to result from Star-by-star or Barnes-Hut-Parallelised with theta_max = 0, error is expected to be 0.
