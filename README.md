@@ -83,7 +83,7 @@ Note that:
 
 To control the "correctness" of the simulations, "compare_gal_files" can be used.
 
-To use, 
+To use:
 
 ```
 Step into the directory:
