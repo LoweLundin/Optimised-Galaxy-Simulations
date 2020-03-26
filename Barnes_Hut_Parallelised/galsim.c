@@ -33,12 +33,11 @@ typedef struct threadInformation
     int starStart, intervalLength;
 } tInfo_t;
 
-//Global variables 
+// Global variables 
 const float circleRadius = 0.0015, circleColor = 0;
 const int windowWidth = 800, windowHeight = 800, W = 1, H = 1;
 const int wait = 0; //micro seconds
 double thetaMax, dT, gravConst;
-
 const double epsilon = 0.15 ;
 
 void createTree(node_t **node, star_t *stars, int i, double minX, double maxX, double minY, double maxY)
@@ -160,17 +159,18 @@ void moveWithTree(node_t * restrict node, star_t * restrict stars, int i, double
 
 void *threadHandler(void *tArg)
 {
-    tInfo_t *myData = (tInfo_t*) tArg;
+    tInfo_t *myData = (tInfo_t*) tArg;	
     int starStart = myData->starStart;
     int starEnd = myData->starStart + myData->intervalLength;
     star_t *starArr = myData->starArr;
     node_t *root = myData->root;
-    //printf("Start %d End %d\n",starStart, starEnd);
+
     for (int i = starStart; i < starEnd; i++)
     {
         moveWithTree(root, starArr, i, thetaMax, 1, dT * gravConst);
         starArr[i].posX += starArr[i].velX * dT;
         starArr[i].posY += starArr[i].velY * dT;
+	    
         if (starArr[i].posX < 0 || starArr[i].posX > 1 || starArr[i].posY < 0 || starArr[i].posY > 1)
         {
             printf("Error: At least one star has an invalid position\n");
@@ -230,7 +230,7 @@ int main(int argc, char const *argv[])
     fclose(fp);
     free(filename);
 
-    //Graphics
+    // Graphics
     if (graphics == 1)
     {
         InitializeGraphics("galsim",windowWidth,windowHeight);
@@ -288,14 +288,16 @@ int main(int argc, char const *argv[])
         }
     }
     
-    //Write to file
+    // Write to file
     fp = fopen("result.gal","w");
+	
     if (!fp)
     {                           
       printf("Error: Could not open file for Writing\n");  
       return -1;
     } 
     star_t *starPointer = starArr;
+	
     for (int i = 0; i < N; i++)
     {
         fwrite(&(starPointer->posX),sizeof(double),1,fp);
