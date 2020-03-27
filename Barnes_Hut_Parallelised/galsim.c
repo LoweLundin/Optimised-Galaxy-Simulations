@@ -206,7 +206,7 @@ int main(int argc, char const *argv[])
 
     gravConst = 100/(double)(N);
 
-    //Read from file
+    // Read from file
     FILE *fp;
     fp = fopen(filename, "r");
     if (!fp)
