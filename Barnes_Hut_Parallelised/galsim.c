@@ -241,7 +241,7 @@ int main(int argc, char const *argv[])
     for(int i = 0; i < nsteps; i++)
     {
 
-        node_t *root = NULL; //A4
+        node_t *root = NULL;
         double trash;
         for (int j = 0; j < N; j++)
         {
