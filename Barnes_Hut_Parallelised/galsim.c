@@ -36,7 +36,7 @@ typedef struct threadInformation
 // Global variables 
 const float circleRadius = 0.0015, circleColor = 0;
 const int windowWidth = 800, windowHeight = 800, W = 1, H = 1;
-const int wait = 0; //micro seconds
+const int wait = 0; // micro seconds
 double thetaMax, dT, gravConst;
 const double epsilon = 0.15 ;
 
@@ -51,7 +51,7 @@ void createTree(node_t **node, star_t *stars, int i, double minX, double maxX, d
         newNode->lXsY = NULL;
         newNode->lXlY = NULL;
         newNode->starIndex = i;
-        newNode->centerOfMassX = stars[i].posX * stars[i].mass; //?
+        newNode->centerOfMassX = stars[i].posX * stars[i].mass;
         newNode->centerOfMassY = stars[i].posY * stars[i].mass;
         newNode->mass = stars[i].mass;
         *node = newNode;
@@ -121,7 +121,7 @@ void calcAttrTree(node_t *node, double *cOMX, double *cOMY, double *m)
     calcAttrTree(node->sXlY,&(node->centerOfMassX),&(node->centerOfMassY),&(node->mass));
     calcAttrTree(node->lXsY,&(node->centerOfMassX),&(node->centerOfMassY),&(node->mass));
     calcAttrTree(node->lXlY,&(node->centerOfMassX),&(node->centerOfMassY),&(node->mass));
-    node->centerOfMassX = node->centerOfMassX/node->mass; //leaves are wrong here
+    node->centerOfMassX = node->centerOfMassX/node->mass;
     node->centerOfMassY = node->centerOfMassY/node->mass;
     *cOMX = *cOMX + (node->mass * node->centerOfMassX);
     *cOMY = *cOMY + (node->mass * node->centerOfMassY);
@@ -248,8 +248,10 @@ int main(int argc, char const *argv[])
             createTree(&root,starArr,j,0,1,0,1);
         }
         calcAttrTree(root,&trash,&trash,&trash);
-        //for loop threaded
+        
+	// for loop threaded
         int residual = N%nThreads;
+	    
         for(int j = 0; j < nThreads; j++)
         {
             if(j == 0)
@@ -268,7 +270,7 @@ int main(int argc, char const *argv[])
             }
             tInfoArr[j].root = root;
             tInfoArr[j].starArr = starArr;
-            //printf("Start %d IntervalLength %d\n",tInfoArr[j].starStart,tInfoArr[j].intervalLength);
+            
             pthread_create(&threads[j], NULL, threadHandler, (void *)&tInfoArr[j]);
         }
         for(int j = 0; j < nThreads; j++)
