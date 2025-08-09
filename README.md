@@ -1,8 +1,6 @@
 # Optimised Galaxy Simulations
 
-This project was produced for the course High Performance Programming taken at Uppsala University, Spring 2019. It was made some time ago, so everything might not be the very best in terms of coding practices.
-
-The project is based on Newton's law of universal gravitation,<img src="/tex/ebe1a6a00f5417138a18fd859a6bb504.svg?invert_in_darkmode&sanitize=true&sanitize=true" align=middle width=85.82971649999999pt height=23.388043799999995pt/>, basically "matter attracts gravitationally relative to weight and distance", with every dot on the display representing a star with a unique position, mass and velocity. At t=0 all stars are initialised as an ellipse.
+The project is based on Newton's law of universal gravitation,<img src="/tex/ebe1a6a00f5417138a18fd859a6bb504.svg?invert_in_darkmode&sanitize=true&sanitize=true" align=middle width=85.82971649999999pt height=23.388043799999995pt/>, basically "matter attracts gravitationally relative to weight and distance", with every dot on the display representing a star with a unique position, mass and velocity. At t=0 all stars are initialised as an ellipse. 
 
 <p align="center">
   <img width="500" height="500" src=galsim10000.gif>
