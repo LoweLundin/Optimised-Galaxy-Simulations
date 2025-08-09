@@ -1,6 +1,6 @@
 # Optimised Galaxy Simulations
 
-The project is based on Newton's law of universal gravitation,<img src="/tex/ebe1a6a00f5417138a18fd859a6bb504.svg?invert_in_darkmode&sanitize=true&sanitize=true" align=middle width=85.82971649999999pt height=23.388043799999995pt/>, basically "matter attracts gravitationally relative to weight and distance", with every dot on the display representing a star with a unique position, mass and velocity. At t=0 all stars are initialised as an ellipse. 
+The project is based on Newton's law of universal gravitation,<img src="/tex/ebe1a6a00f5417138a18fd859a6bb504.svg?invert_in_darkmode&sanitize=true&sanitize=true" align=middle width=85.82971649999999pt height=23.388043799999995pt/>, basically "matter attracts gravitationally relative to weight and distance", with every dot on the display representing a star with a unique position, mass and velocity. At t=0, all stars are initialised as an ellipse, the spiral galaxy isn't hard-coded, but an emergent property of gravitation. 
 
 <p align="center">
   <img width="500" height="500" src=galsim10000.gif>
